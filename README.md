@@ -23,7 +23,8 @@ Whether it’s a Python script to clean up data, a shell command to speed up a r
 
 | Project | Description |
 |--------|-------------|
-| 📁 Auto_network_map | A script set up to auto-detect and map out network devices. |
+| 📁 Auto_network_map | A script set up to auto-detect and map out network devices. | https://github.com/JamesBratton-Codes/Auto_network_map |
+| 📁 Flash Cards | I'm studying for my CCNA certification and needed a free way to create and study flashcards. | https://github.com/JamesBratton-Codes/Auto_network_map |
 
 (Yeah, there’s more. I experiment a lot. Stuff shows up here when it works—or breaks in fun ways.)
 
