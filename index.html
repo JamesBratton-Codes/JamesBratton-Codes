@@ -25,7 +25,30 @@
         color: var(--fg);
         line-height: 1.6;
         padding: 2rem;
-        text-shadow: 0 0 2px var(--fg);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(0, 255, 0, 0.05),
+          rgba(0, 255, 0, 0.05) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      .cursor {
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
       }
 
       a {
@@ -73,6 +96,9 @@
         margin-bottom: 1rem;
         border-left: 4px solid var(--accent);
         padding-left: 0.75rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
       }
 
       .projects-grid {
@@ -85,7 +111,7 @@
         background: var(--card-bg);
         border: 1px solid #003300;
         border-radius: 0.5rem;
-        padding: 1rem 1.25rem;
+        padding: 1.5rem;
         box-shadow: 0 0 10px var(--card-shadow);
       }
 
@@ -138,7 +164,7 @@
 
     <main>
       <section>
-        <h2>>> WHAT I DO</h2>
+        <h2>>> What I Do</h2>
         <ul class="custom-list">
           <li>Write Python & Bash scripts that actually save time</li>
           <li>Dive into AI agent experiments (CrewAI, LLM fine-tuning)</li>
@@ -148,7 +174,7 @@
       </section>
 
       <section>
-        <h2>>> FEATURED PROJECTS</h2>
+        <h2>>> Featured Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
             <h3>Auto Network Map</h3>
@@ -164,18 +190,20 @@
       </section>
 
       <section>
-        <h2>>> WHY I BUILD</h2>
+        <h2>>> Why I Build</h2>
         <p>Everything starts with a question or frustration. I build what I need, share what works, and learn from what breaks.</p>
       </section>
 
       <section>
-        <h2>>> CONTACT</h2>
+        <h2>>> Contact</h2>
         <ul class="custom-list">
           <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
           <li>LinkedIn: <a href="https://www.linkedin.com/in/your-link">linkedin.com/in/your-link</a></li>
           <li>GitHub: <a href="https://github.com/JamesBratton-Codes">github.com/JamesBratton-Codes</a></li>
         </ul>
       </section>
+
+      <p style="margin-top: 2rem;">> <span class="cursor">█</span></p>
     </main>
 
     <footer>
