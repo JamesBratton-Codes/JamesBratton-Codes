@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Bratton – Creative Dev Portfolio</title>
+    <style>
+      :root {
+        --bg: #000000;
+        --card-bg: #0d0d0d;
+        --fg: #00ff00;
+        --accent: #00ff00;
+        --card-shadow: rgba(0, 255, 0, 0.15);
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+        padding: 2rem;
+        text-shadow: 0 0 2px var(--fg);
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      a:hover {
+        background-color: var(--accent);
+        color: black;
+      }
+
+      header, main, footer {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+
+      header {
+        text-align: center;
+        padding-top: 2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        border-bottom: 1px dashed var(--accent);
+        padding-bottom: 0.5rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      section {
+        margin-top: 2.5rem;
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid var(--accent);
+        padding-left: 0.75rem;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        background: var(--card-bg);
+        border: 1px solid #003300;
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 0 10px var(--card-shadow);
+      }
+
+      .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-card a {
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      ul.custom-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul.custom-list li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.75rem;
+      }
+
+      ul.custom-list li::before {
+        content: "▌";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.9rem;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>>> WELCOME TO MY TERMINAL</h1>
+      <p>I build creative tools, automate the boring parts, and break things just so I can fix them better.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>>> WHAT I DO</h2>
+        <ul class="custom-list">
+          <li>Write Python & Bash scripts that actually save time</li>
+          <li>Dive into AI agent experiments (CrewAI, LLM fine-tuning)</li>
+          <li>Hack together music-tech integrations in Ableton</li>
+          <li>Turn weird ideas into functioning prototypes—fast</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>>> FEATURED PROJECTS</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Auto Network Map</h3>
+            <p>Automates discovery & visual mapping of network devices—because cables shouldn’t be mysteries.</p>
+            <a href="https://github.com/JamesBratton-Codes/Auto_network_map" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-card">
+            <h3>Flash Card Generator</h3>
+            <p>Python script that generates study flashcards—created while prepping for my CCNA.</p>
+            <a href="https://github.com/JamesBratton-Codes/FlashCards" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>>> WHY I BUILD</h2>
+        <p>Everything starts with a question or frustration. I build what I need, share what works, and learn from what breaks.</p>
+      </section>
+
+      <section>
+        <h2>>> CONTACT</h2>
+        <ul class="custom-list">
+          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/your-link">linkedin.com/in/your-link</a></li>
+          <li>GitHub: <a href="https://github.com/JamesBratton-Codes">github.com/JamesBratton-Codes</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>> SESSION TERMINATED — <span id="year"></span></p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
