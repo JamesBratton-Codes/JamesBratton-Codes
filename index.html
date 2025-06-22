@@ -8,8 +8,8 @@
       :root {
         --bg: #000000;
         --card-bg: #0d0d0d;
-        --fg: #00ff00;
-        --accent: #00ff00;
+        --fg: #39ff14;          /* brighter green for all text           */
+        --accent: #39ff14;      /* same bright green for links & borders  */
         --card-shadow: rgba(0, 255, 0, 0.15);
       }
 
@@ -23,10 +23,13 @@
         font-family: 'Courier New', Courier, monospace;
         background: var(--bg);
         color: var(--fg);
+        font-weight: 600;
         line-height: 1.6;
         padding: 2rem;
       }
 
+      /*  Optional CRT scan-lines ----------
+          Uncomment if you want them back; they slightly dim text.
       body::before {
         content: "";
         position: fixed;
@@ -34,28 +37,26 @@
         width: 100vw; height: 100vh;
         background: repeating-linear-gradient(
           to bottom,
-          rgba(0, 255, 0, 0.05),
-          rgba(0, 255, 0, 0.05) 1px,
+          rgba(0, 255, 0, 0.04),
+          rgba(0, 255, 0, 0.02) 1px,
           transparent 1px,
           transparent 2px
         );
         pointer-events: none;
         z-index: 999;
       }
+      ------------------------------------ */
 
+      /* blinking cursor */
       .cursor {
         animation: blink 1s step-start infinite;
       }
-
-      @keyframes blink {
-        50% { opacity: 0; }
-      }
+      @keyframes blink { 50% { opacity: 0; } }
 
       a {
         color: var(--accent);
         text-decoration: underline;
       }
-
       a:hover {
         background-color: var(--accent);
         color: black;
@@ -72,7 +73,6 @@
         text-align: center;
         padding-top: 2rem;
       }
-
       header h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
@@ -80,16 +80,13 @@
         border-bottom: 1px dashed var(--accent);
         padding-bottom: 0.5rem;
       }
-
       header p {
         font-size: 1.1rem;
         max-width: 600px;
         margin: 0 auto;
       }
 
-      section {
-        margin-top: 2.5rem;
-      }
+      section { margin-top: 2.5rem; }
 
       section h2 {
         font-size: 1.8rem;
@@ -106,7 +103,6 @@
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 1.5rem;
       }
-
       .project-card {
         background: var(--card-bg);
         border: 1px solid #003300;
@@ -114,33 +110,16 @@
         padding: 1.5rem;
         box-shadow: 0 0 10px var(--card-shadow);
       }
+      .project-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+      .project-card p  { font-size: 0.95rem; margin-bottom: 0.75rem; }
+      .project-card a  { display: inline-block; font-weight: bold; }
 
-      .project-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .project-card p {
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .project-card a {
-        display: inline-block;
-        font-weight: bold;
-      }
-
-      ul.custom-list {
-        list-style: none;
-        padding-left: 0;
-      }
-
+      ul.custom-list { list-style: none; padding-left: 0; }
       ul.custom-list li {
         padding-left: 1.5rem;
         position: relative;
         margin-bottom: 0.75rem;
       }
-
       ul.custom-list li::before {
         content: "▌";
         position: absolute;
@@ -156,13 +135,18 @@
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>>> WELCOME TO MY TERMINAL</h1>
-      <p>I build creative tools, automate the boring parts, and break things just so I can fix them better.</p>
+      <p>
+        I build creative tools, automate the boring parts, and break things
+        just so I can fix them better.
+      </p>
     </header>
 
     <main>
+      <!-- WHAT I DO -->
       <section>
         <h2>>> What I Do</h2>
         <ul class="custom-list">
@@ -173,36 +157,62 @@
         </ul>
       </section>
 
+      <!-- PROJECTS -->
       <section>
         <h2>>> Featured Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
             <h3>Auto Network Map</h3>
-            <p>Automates discovery & visual mapping of network devices—because cables shouldn’t be mysteries.</p>
-            <a href="https://github.com/JamesBratton-Codes/Auto_network_map" target="_blank">View on GitHub</a>
+            <p>
+              Automates discovery & visual mapping of network devices—
+              because cables shouldn’t be mysteries.
+            </p>
+            <a href="https://github.com/JamesBratton-Codes/Auto_network_map" target="_blank">
+              View on GitHub
+            </a>
           </div>
+
           <div class="project-card">
             <h3>Flash Card Generator</h3>
-            <p>Python script that generates study flashcards—created while prepping for my CCNA.</p>
-            <a href="https://github.com/JamesBratton-Codes/FlashCards" target="_blank">View on GitHub</a>
+            <p>
+              Python script that generates study flashcards—created while
+              prepping for my CCNA.
+            </p>
+            <a href="https://github.com/JamesBratton-Codes/FlashCards" target="_blank">
+              View on GitHub
+            </a>
           </div>
         </div>
       </section>
 
+      <!-- WHY I BUILD -->
       <section>
         <h2>>> Why I Build</h2>
-        <p>Everything starts with a question or frustration. I build what I need, share what works, and learn from what breaks.</p>
+        <p>
+          Everything starts with a question or frustration. I build what I need,
+          share what works, and learn from what breaks.
+        </p>
       </section>
 
+      <!-- CONTACT -->
       <section>
         <h2>>> Contact</h2>
         <ul class="custom-list">
-          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/your-link">linkedin.com/in/your-link</a></li>
-          <li>GitHub: <a href="https://github.com/JamesBratton-Codes">github.com/JamesBratton-Codes</a></li>
+          <li>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/jamessbratton/"
+               target="_blank">linkedin.com/in/jamessbratton</a>
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/JamesBratton-Codes" target="_blank">
+              github.com/JamesBratton-Codes
+            </a>
+          </li>
         </ul>
       </section>
 
+      <!-- Blinking cursor -->
       <p style="margin-top: 2rem;">> <span class="cursor">█</span></p>
     </main>
 
@@ -211,7 +221,8 @@
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      // Automatic current year
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
