@@ -42,7 +42,7 @@ Also: Common sense, coffee, and stubbornness.
 
 Want to collaborate, chat tech, or just geek out over something weird you built too?
 
-→ [LinkedIn](https://linkedin.com/in/your-link)  
+→ [LinkedIn](https://www.linkedin.com/in/jamessbratton/)  
 → Or message me right here on GitHub
 
 ---
